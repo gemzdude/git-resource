@@ -60,7 +60,7 @@ git clone --single-branch $depthflag $uri $branchflag $destination
 
 cd $destination
 
-git fetch origin
+git fetch origin +refs/pull/*/head:refs/remotes/origin/pr/*
 git checkout -q $ref
 
 invalid_key() {
